@@ -19,8 +19,10 @@ namespace eRestaurant.Framework.DAL
         // One property for each Table/Entity in the database
         public DbSet<MenuCategory> MenuCategories { get; set; }
         public DbSet<Item> Items { get; set; }
+        public DbSet<Bill> Bills { get; set; }
         // The property name must match the name of the database table
         public DbSet<Table> Tables { get; set; }
+        public DbSet<Waiter> Waiters { get; set; }
         public DbSet<SpecialEvent> SpecialEvents { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
 
