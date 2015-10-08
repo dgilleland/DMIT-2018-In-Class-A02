@@ -11,4 +11,14 @@ public partial class Admin_ManageSpecialEvents : System.Web.UI.Page
     {
 
     }
+    protected void ProcessExceptions(object sender, ObjectDataSourceStatusEventArgs e)
+    {
+        if(e.Exception != null)
+        {
+            // We can display a message.
+            MessageLabel.Text = "Unable to process the request.";
+            // Prevent the error from being handled by the ObjectDataSource control itself
+            e.ExceptionHandled = true; // I've dealt with the problem
+        }
+    }
 }
