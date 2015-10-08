@@ -33,7 +33,7 @@
                     &nbsp;&nbsp;
                     <asp:LinkButton runat="server" CommandName="Delete"
                         ID="DeleteButton">
-                        Insert
+                        Delete
                         <span class="glyphicon glyphicon-trash"></span>
                     </asp:LinkButton>
                     &nbsp;&nbsp;&nbsp;
