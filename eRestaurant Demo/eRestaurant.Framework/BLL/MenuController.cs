@@ -18,7 +18,12 @@ namespace eRestaurant.Framework.BLL
         {
             using (var context = new RestaurantContext())
             {
-                return context.Items.ToList();
+                // Note: To use the Lambda or Method style of Include(),
+                // you need to have the following namespace reference:
+                // use System.Data.Entity;
+                // The .Include() method on the DbSet<T> class performs
+                // "eager loading" of the data.
+                return context.Items.Include(it => it.MenuCategory).ToList();
             }
         }
     }
