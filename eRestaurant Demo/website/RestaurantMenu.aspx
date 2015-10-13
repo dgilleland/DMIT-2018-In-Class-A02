@@ -5,12 +5,17 @@
         <h1>Our Menu Items</h1>
         <asp:Repeater ID="MenuItemRepeater" runat="server" DataSourceID="MenuItemDataSource">
             <ItemTemplate>
-                <%# ((decimal)Eval("CurrentPrice")).ToString("C") %>
-                &mdash;
-                <%# Eval("Description") %>
-                &mdash;
-                <%# Eval("Calories") %>
+                <div>
+                    <%# ((decimal)Eval("CurrentPrice")).ToString("C") %>
+                    &mdash;
+                    <%# Eval("Description") %>
+                    &mdash;
+                    <%# Eval("Calories") %>
+                </div>
             </ItemTemplate>
+            <SeparatorTemplate>
+                <hr />
+            </SeparatorTemplate>
         </asp:Repeater>
 
         <asp:ObjectDataSource ID="MenuItemDataSource" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="ListMenuItems" TypeName="eRestaurant.Framework.BLL.MenuController">
