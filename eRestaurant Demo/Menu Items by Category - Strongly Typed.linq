@@ -33,7 +33,7 @@ void Main()
 public class CategoryDTO // Data-Transfer Object
 {
 	public string Description { get;set;}
-	public IEnumerable MenuItems { get;set;}
+	public IEnumerable<MenuItemDTO> MenuItems { get;set;}
 }
 public class MenuItemDTO
 {
