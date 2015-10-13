@@ -9,6 +9,8 @@
                     <%# ((decimal)Eval("CurrentPrice")).ToString("C") %>
                     &mdash;
                     <%# Eval("Description") %>
+                    &ndash;
+                    <%# Eval("MenuCategory.Description") %>
                     &mdash;
                     <%# Eval("Calories") %>
                 </div>
