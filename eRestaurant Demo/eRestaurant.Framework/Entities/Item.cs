@@ -12,8 +12,10 @@ namespace eRestaurant.Framework.Entities
         [Key]
         public int ItemId { get; set; }
         public string Description { get; set; }
-        public double CurrentPrice { get; set; }
-        public double CurrentCost { get; set; }
+        // Use decimal for the SQL money data type
+        public decimal CurrentPrice { get; set; }
+        // Use decimal for the SQL money data type
+        public decimal CurrentCost { get; set; }
         public bool Active { get; set; }
         public int? Calories { get; set; }
         public string Comment { get; set; }
