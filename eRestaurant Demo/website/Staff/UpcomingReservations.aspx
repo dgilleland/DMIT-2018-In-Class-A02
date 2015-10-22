@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-12">
             <h1>Upcoming Reservations</h1>
-            <asp:RadioButtonList ID="RadioButtonList1" runat="server" 
+            <asp:RadioButtonList ID="ActiveEventRadioButtonList" runat="server" 
                 DataSourceID="ActiveEventsDataSource"
                 AppendDataBoundItems="true"
                 RepeatLayout="Flow" RepeatDirection="Horizontal"
@@ -13,6 +13,24 @@
                 <asp:ListItem Value="None">No Events</asp:ListItem>
             </asp:RadioButtonList>
             <asp:ObjectDataSource ID="ActiveEventsDataSource" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="ListActiveEvents" TypeName="eRestaurant.Framework.BLL.ReservationsController">
+            </asp:ObjectDataSource>
+
+            <!-- Show the upcoming reservations here -->
+            <asp:Repeater ID="ReservationsRepeater" runat="server"
+                 DataSourceID="DailyReservationsDataSource"
+                 ItemType="eRestaurant.Framework.Entities.DTOs.DailyReservation">
+                <ItemTemplate>
+                    Month: <%# Item.Month %>
+                    Day: <%# Item.Day %>
+                </ItemTemplate>
+                <SeparatorTemplate>
+                    <hr />
+                </SeparatorTemplate>
+            </asp:Repeater>
+            <asp:ObjectDataSource ID="DailyReservationsDataSource" runat="server" OldValuesParameterFormatString="original_{0}" SelectMethod="ListUpcomingReservations" TypeName="eRestaurant.Framework.BLL.ReservationsController">
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="ActiveEventRadioButtonList" PropertyName="SelectedValue" Name="eventCode" Type="String"></asp:ControlParameter>
+                </SelectParameters>
             </asp:ObjectDataSource>
         </div>
     </div>
