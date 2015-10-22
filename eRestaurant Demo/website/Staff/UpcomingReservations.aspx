@@ -22,6 +22,8 @@
                 <ItemTemplate>
                     Month: <%# Item.Month %>
                     Day: <%# Item.Day %>
+
+                    TODO: Display the Item.Reservations in a GridView.
                 </ItemTemplate>
                 <SeparatorTemplate>
                     <hr />
