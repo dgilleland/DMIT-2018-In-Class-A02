@@ -7,6 +7,7 @@ using System.ComponentModel; // comes with Entity Framework
 using eRestaurant.Framework.DAL;
 using eRestaurant.Framework.Entities;
 using eRestaurant.Framework.Entities.POCOs;
+using eRestaurant.Framework.Entities.DTOs;
 
 namespace eRestaurant.Framework.BLL
 {
@@ -27,6 +28,12 @@ namespace eRestaurant.Framework.BLL
                              };
                 return result.ToList();
             }
+        }
+
+        [DataObjectMethod(DataObjectMethodType.Select, false)]
+        public List<DailyReservation> ListUpcomingReservations(string eventCode)
+        {
+            throw new NotImplementedException();
         }
     }
 }
