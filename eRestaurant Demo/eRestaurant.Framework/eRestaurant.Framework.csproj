@@ -77,6 +77,7 @@
     <Compile Include="Entities\POCOs\CategoryMenuItem.cs" />
     <Compile Include="Entities\Reservation.cs" />
     <Compile Include="Entities\Security\ApplicationUser.cs" />
+    <Compile Include="Entities\Security\SecurityRoles.cs" />
     <Compile Include="Entities\SpecialEvent.cs" />
     <Compile Include="Entities\Table.cs" />
     <Compile Include="Entities\Waiter.cs" />
