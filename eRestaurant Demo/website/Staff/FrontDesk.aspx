@@ -26,6 +26,12 @@
         <asp:TextBox id="SearchTime" runat="server" TextMode="Time" Text="13:00" CssClass="clockpicker"></asp:TextBox>
 
         <!-- TODO -->
+        <script src="../Scripts/clockpicker.js"></script>
+        <script>
+            $('.clockpicker').clockpicker({ donetext: 'Accept' });
+        </script>
+        <link itemprop="url" href="../Content/standalone.css" rel="stylesheet" />
+        <link itemprop="url" href="../Content/clockpicker.css" rel="stylesheet" />
         <details style="display:inline-block; vertical-align: top;">
             <summary class="badge">About ClockPicker &hellip;</summary>
             <h4>Fancy Bootstrap <a href="http://weareoutman.github.io/clockpicker/">ClockPicker</a></h4>
