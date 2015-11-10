@@ -60,6 +60,7 @@
     <Compile Include="BLL\ReportController.cs" />
     <Compile Include="BLL\ReservationsController.cs" />
     <Compile Include="BLL\RestaurantAdminController.cs" />
+    <Compile Include="BLL\SeatingController.cs" />
     <Compile Include="BLL\Security\RoleManager.cs" />
     <Compile Include="BLL\Security\UserManager.cs" />
     <Compile Include="BLL\TempController.cs" />
@@ -70,6 +71,8 @@
     <Compile Include="Entities\DTOs\CategoryDTO.cs" />
     <Compile Include="Entities\DTOs\DailyReservation.cs" />
     <Compile Include="Entities\DTOs\MenuItemDTO.cs" />
+    <Compile Include="Entities\DTOs\ReservationCollection.cs" />
+    <Compile Include="Entities\DTOs\ReservationSummary.cs" />
     <Compile Include="Entities\Item.cs" />
     <Compile Include="Entities\MenuCategory.cs" />
     <Compile Include="Entities\POCOs\ActiveEvent.cs" />
