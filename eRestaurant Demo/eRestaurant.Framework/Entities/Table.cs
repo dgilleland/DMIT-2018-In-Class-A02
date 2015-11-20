@@ -20,6 +20,7 @@ namespace eRestaurant.Framework.Entities
 
         // Navigation Properties
         public virtual ICollection<Reservation> Reservations { get; set; }
+        public virtual ICollection<Bill> Bills { get; set; }
 
         public Table()
         {

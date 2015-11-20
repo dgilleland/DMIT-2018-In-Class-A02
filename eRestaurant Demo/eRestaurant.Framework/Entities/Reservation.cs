@@ -39,5 +39,6 @@ namespace eRestaurant.Framework.Entities
         // Navigation Properties
         public virtual ICollection<Table> Tables { get; set; }
         public virtual SpecialEvent SpecialEvent { get; set; }
+        public virtual ICollection<Bill> Bills { get; set; }
     }
 }
