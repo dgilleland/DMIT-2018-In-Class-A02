@@ -64,6 +64,7 @@
     <Compile Include="BLL\Security\RoleManager.cs" />
     <Compile Include="BLL\Security\UserManager.cs" />
     <Compile Include="BLL\TempController.cs" />
+    <Compile Include="BLL\WaiterController.cs" />
     <Compile Include="DAL\RestaurantContext.cs" />
     <Compile Include="DAL\Security\ApplicationDbContext.cs" />
     <Compile Include="Entities\Bill.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="Entities\DTOs\CategoryDTO.cs" />
     <Compile Include="Entities\DTOs\DailyReservation.cs" />
     <Compile Include="Entities\DTOs\MenuItemDTO.cs" />
+    <Compile Include="Entities\DTOs\Order.cs" />
     <Compile Include="Entities\DTOs\ReservationCollection.cs" />
     <Compile Include="Entities\DTOs\ReservationSummary.cs" />
     <Compile Include="Entities\DTOs\SeatingSummary.cs" />
@@ -79,6 +81,7 @@
     <Compile Include="Entities\POCOs\ActiveEvent.cs" />
     <Compile Include="Entities\POCOs\Booking.cs" />
     <Compile Include="Entities\POCOs\CategoryMenuItem.cs" />
+    <Compile Include="Entities\POCOs\UnpaidBill.cs" />
     <Compile Include="Entities\Reservation.cs" />
     <Compile Include="Entities\Security\ApplicationUser.cs" />
     <Compile Include="Entities\Security\SecurityRoles.cs" />
