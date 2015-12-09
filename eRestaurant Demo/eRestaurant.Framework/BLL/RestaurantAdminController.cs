@@ -65,6 +65,25 @@ namespace eRestaurant.Framework.BLL
                 context.SaveChanges();
             }
         }
+        [DataObjectMethod(DataObjectMethodType.Delete, false)]
+        public void DeactivateSpecialEvent(SpecialEvent item)
+        {
+            using (var context = new RestaurantContext())
+            {
+                // First, get a reference to the actual item in the Db
+                // Find() is a method to look up an item by it's primary key.
+                var existing = context.SpecialEvents.Find(item.EventCode);
+
+                // Second, remove the item from the database context
+                existing.Active = false; // Modifies the property on the SpecialEvent
+                var updatable = context.Entry(existing); // Get a reference to the special event as an Entity in the database context
+                // Specify a particular property as being changed.
+                updatable.Property(x => x.Active).IsModified = true;
+
+                // Lastly, save the changes to the database
+                context.SaveChanges();
+            }
+        }
 
         [DataObjectMethod(DataObjectMethodType.Insert, false)]
         public void AddSpecialEvent(SpecialEvent item)
